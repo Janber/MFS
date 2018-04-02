@@ -4,13 +4,13 @@ import android.app.Application;
 import android.content.res.Configuration;
 import jp.co.mbpsoft.mfs.ui.util.LocalStorageUtil;
 
-public class MyApplication extends Application {
+public class MFSApp extends Application {
 
-    private static MyApplication sApp;
+    private static MFSApp sApp;
 
-    public static MyApplication getInstance() {
+    public static MFSApp getInstance() {
         if (sApp == null) {
-            sApp = new MyApplication();
+            sApp = new MFSApp();
         }
         return sApp;
 
@@ -25,7 +25,7 @@ public class MyApplication extends Application {
         return LocalStorageUtil.getBoolean("is_tablet", false);
     }
 
-    public MyApplication() {
+    public MFSApp() {
 
     }
 
